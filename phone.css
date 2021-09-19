@@ -1,0 +1,212 @@
+*{
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+/* utility classes  */
+@keyframes flip{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.heading {
+    font-size: 1.5rem;
+    border-bottom-width: 3px;
+    padding-bottom: 0.31rem !important;
+    margin-bottom: 1rem;
+    margin-top: .6rem;
+}
+/* header is here  */
+header {
+    height: 3rem;
+}
+header>div {
+    font-size: 2.5rem;
+}
+/* hidden bar now visible  */
+#bar{
+    display: flex;
+    height: 100%;
+    padding: 0 .5rem;
+    align-items: center;
+    color: white;
+    margin: 1rem .5rem 0 ;
+    font-size: 1.6rem;
+}
+/* navbar goes here  */
+#navbar{
+    display: none;
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    animation: NavBar 0.4s ease-in-out both ;
+}
+/* navbar animation goes here  */
+@keyframes NavBar{
+    0%{
+        transform: scaleY(0);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}
+#navbar a{
+    display: block;
+    height: auto;
+    text-shadow: 0px 0px 2px black;
+    animation: navbarLinks 1s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.479) ;
+    font-size: 1.5rem;
+}
+/* navbar links animation  */
+@keyframes navbarLinks{
+    0%{
+        opacity: .5;
+        transform: rotateX(0deg);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateX(360deg);
+    }
+}
+/* div to cover visible area of the list  */
+#navBottom{
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    background-color: black;
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+}
+
+/* section goes here  */
+section{
+    padding-top: 2.5rem ;
+}
+
+/* home and about section goes here  */
+#section1{
+    flex-wrap: wrap;
+    padding-top: .5rem;
+    /* overflow: hidden; */
+}
+#image-section,#about-section{
+    width: 100%;
+    height: 100vh;
+}
+#image-section img{
+    width: 80%;
+}
+#image-section .name:last-child span{
+    display: block;
+}
+#about-section{
+    padding: 3.5rem 0 0;
+}
+#about-section .name{
+    color: aqua;
+    font-size: 1.8rem;
+    padding: 0 0 .1rem;
+    margin: 0 0 2rem;
+    text-align: center;
+    border-bottom: 3px solid aqua;
+}
+#paragraph{
+    margin: 0;
+    width: 100%;
+    font-size: 1.4rem;
+}
+/* skills section goes here  */
+.skills{
+    flex-direction: column !important;
+    justify-content: center;
+}
+.skillSection{
+    padding: 0;
+}
+.skillSection,.skills img{
+    width: 100%;
+}
+.soloLearn a{
+    display: block;
+    width: 100%;
+    margin: .5rem 0 0;
+}
+/* projects section goes here  */
+.project{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    flex-direction: column;
+    float: none !important;
+    margin: 1.4rem 0;
+    animation-name: flip;
+}
+.project-name a{
+    display: block;
+    width: 50%;
+    margin: 0.5rem 0 0;
+    text-align: center;
+}
+.content,.screenshot{
+    width: 100%;
+}
+.screenshot{
+    padding: 0;
+}
+/* contact section goes here  */
+#section4{
+    flex-wrap: wrap;
+    padding-bottom: 5.5rem;
+}
+#section4 > div{
+    width: 100%;
+    min-height:auto;
+}
+#section4 div:first-child{
+    padding: 0 0 1rem;
+}
+.address{
+    font-size: 1.2rem;
+    padding: .31rem 0;
+    overflow-x: auto;
+    top: -100;
+}
+.address i{
+    display: inline-block;
+    width: 1.6rem;
+    text-align: center;
+}
+#social-links{
+    background-color: rgb(48, 44, 44);
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    bottom: 0;
+    z-index: 90;
+    display: none;
+    animation: open 1s ease-in-out;
+}
+@keyframes open{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+fieldset{
+    width: 100%;
+    margin: 1rem auto 5rem;
+    border: 1px solid rgba(255, 255, 255, 0.247);
+    padding: 1rem ;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.288);
+}

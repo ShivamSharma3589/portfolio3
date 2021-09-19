@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    outline: none;
+    font-family: 'Dosis', sans-serif;
+    user-select: none;
+}
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.627),rgba(0, 0, 0, 0.856)), url(b1.jpeg) center/cover no-repeat fixed;
+    min-height: 100vh;
+}
+/* utility classes goes here  */
+.heading {
+    color: aqua;
+    font-size: 3rem;
+    padding: 1rem 0 .5rem;
+    margin: 0 0 2rem;
+    text-align: center;
+    border-bottom: 0.3rem solid aqua;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+}
+@keyframes side{
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@keyframes sides{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+/* header section goes here  */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.479);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 4.2rem;
+    min-width: 100%;
+    padding: 0 .5rem;
+    color: white;
+}
+/* portfolio  */
+header>div {
+    font-size: 3rem;
+}
+header span {
+    color: red;
+}
+/* hidden bar in navbar */
+#bar {
+    display: none;
+}
+/* navbar  */
+#navbar {
+    height: 100%;
+}
+#navbar a {
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    height: 100%;
+}
+/* article tag goes here  */
+.article {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+/* section goes here  */
+section {
+    min-height: 100vh;
+    min-width: 100%;
+    padding: 4.2rem 1rem 0;
+    color: white;
+}
+/* home and about section goes here  */
+#image-section, #about-section {
+    width: 50%;
+    flex-direction: column;
+}
+/* name section goes here  */
+.name {
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+/* fresher code goes here  */
+#fresher {
+    font-size: 1.5rem;
+    padding: 0 1rem .5rem;
+}
+/* image goes here  */
+#image-section img {
+    width: 40%;
+    border-radius: 5px; 
+}
+/* frontend developer heading goes here  */
+#image-section .name:last-child {
+    margin-top: 1rem;
+    border-radius: 3rem;
+    box-shadow: 0px 0px px rgb(0, 255, 255);
+}
+/* about me section goes here  */
+#about-section {
+    display: none;
+    animation: aboutSection 1s ease-in-out both;
+}
+/* animation for about section  */
+@keyframes aboutSection {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+/* about section name goes here  */
+#about-section .name {
+    padding: 0 1rem 1rem;
+}
+/* paragraph section goes here  */
+#paragraph {
+    text-align: justify;
+    padding: 1rem;
+    width: 90%;
+    margin: 0 auto;
+    line-height: 1.5rem;
+    border-radius: 10px;
+    min-height: 60vh;
+    background-color: rgba(0, 0, 0, 0.507);
+}
+/* skills section goes here  */
+#section2{
+    /* display: none; */
+}
+.skills {
+    width: 100%;
+    margin: 1rem auto;
+    padding: 1rem ;
+    justify-content: flex-start;
+    border: 1px solid rgba(255, 255, 255, 0.212);
+    border-radius: 10px;
+    box-shadow: 0px 4px 3px rgba(255, 255, 255, 0.425);
+    background-color: rgba(0, 0, 0, 0.342);
+    animation: side 1.7s ease-in-out 1;
+}
+.skills:nth-child(odd) {
+    flex-direction: row-reverse;
+    animation: sides 1.7s ease-in-out 1;
+}
+/* skill section contents  */
+.skillSection {
+    width: 75%;
+    padding: 0 1rem;
+}
+/* skill section images */
+.skills img {
+    width: 25%;
+    border-radius: 5px;
+}
+.skillName {
+    font-size: 2rem;
+    text-align: left;
+}
+.soloLearn {
+    font-size: 1.3rem;
+    padding: 0.3rem 0;
+}
+.soloLearn a {
+    color: rgb(0, 174, 255);
+    border: 1px solid rgb(0, 174, 255);
+    padding: 0 0.5rem;
+    border-radius: 3px;
+}
+.soloLearn a:active{
+    color: white;
+    background-color: rgb(0, 174, 255);
+}
+/* progress bar goes here  */
+.scale {
+    width: 100%;
+    margin: 0.5rem 0;
+    background-color: rgba(255, 255, 255, 0.13);
+    border-radius: 2rem;
+    padding: 0.15rem .1rem;
+}
+.fill {
+    padding: 1rem 0;
+    border-radius: 2rem;
+    background-color: aqua;
+    width: 70%;
+}
+/* project section goes here  */
+#section3{
+    /* display: none; */
+}
+.project {
+    border: 1px solid rgba(255, 255, 255, 0.123);
+    border-radius: 5px;
+    padding: .5rem 2rem;
+    margin: 0.5rem;
+    width: 70%;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.514);
+    box-shadow: 0px 5px 5px rgba(255, 255, 255, 0.164);
+    animation: side 1.7s ease-in-out 1;
+}
+.project:nth-child(odd) {
+    float: right;
+    animation: sides 1.7s ease-in-out 1;
+}
+.project-name {
+    font-size: 1.7rem;
+    margin: 0 0 0.5rem;
+    color: aqua;
+}
+.content {
+    width: 60%;
+}
+.screenshot {
+    width: 40%;
+}
+.project-name a {
+    color: rgb(0, 0, 0);
+    background-color: aqua;
+    border-radius: 5px;
+    padding: 0.3rem 2rem;
+    margin-left: 0.3rem;
+    font-size: 1rem;
+    box-shadow: inset -2px -2px 3px rgb(5, 61, 61);
+}
+.project a:active {
+    box-shadow: none;
+}
+.subHeading {
+    color: rgb(1, 214, 214);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.screenshot img {
+    width:100% ;
+    border-radius: 5px;
+}
+.details {
+    padding: 0.3rem 0;
+}
+.details ul {
+    list-style-position: inside;
+}
+/* contact section goes here  */
+#section4>div {
+    width: 50%;
+    min-height: 80vh;
+    display: none;
+    animation: side 1s ease-in-out 1;
+}
+#section4>div:first-child {
+    padding: .5rem 2rem 2rem;
+    animation: sides 1s ease-in-out 1;
+}
+#address {
+    position: relative;
+}
+.address {
+    font-size: 1.2rem;
+    padding: .31rem 0;
+}
+.address i {
+    display: inline-block;
+    width: 1.6rem;
+    text-align: center;
+}
+#social-links {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 2.5rem;
+    width: 100%;
+    position: absolute;
+    bottom: 3.1rem;
+    left: 0;
+    padding: 0 5%;
+}
+#social-links a {
+    text-align: center;
+    color: aliceblue;
+}
+#social-links a:active {
+    color: rgb(0, 255, 255);
+    transform: scale(0.9);
+}
+legend {
+    font-size: 1.3rem;
+    padding: 0.5rem 0;
+}
+fieldset {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.247);
+    padding: .5rem 2rem;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.288);
+}
+input {
+    width: 100% !important;
+    display: inline-block;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(245, 245, 245, 0.541);
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    color: white;
+}
+textarea {
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    color: white;
+    outline: none;
+    border: 1px solid rgba(245, 245, 245, 0.541);
+    resize: vertical;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    height: 30vh;
+    border-radius: 5px;
+}
+/* send button  */
+fieldset input[type = button] {
+    background-color: rgba(64, 224, 208, 0.671);
+    border: 1px solid rgba(245, 245, 245, 0.459);
+    padding: .8rem ;
+    cursor: pointer;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 5px;
+}
+fieldset input[type = button]:active {
+    transform: scale(0.9);
+}
+/* media queries for devices with more than 600px  */
+@media (min-width:601px) {
+    #navbar a:hover {
+        color: red !important;
+        background-color:rgba(0, 0, 0, 0.76);
+        border-bottom: 5px solid red !important;
+    }
+    .soloLearn a:hover {
+        background-color: rgb(0, 174, 255);
+        color: white;
+    }
+    #social-links a:hover {
+        color: teal;
+    }
+    fieldset input[type = button]:hover {
+        background-color: transparent;
+        border: 1px solid turquoise;
+        color: white;
+    }    
+}
